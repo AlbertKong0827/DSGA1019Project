@@ -1,0 +1,2095 @@
+Collecting package metadata (current_repodata.json): ...working... done
+Solving environment: ...working... done
+
+## Package Plan ##
+
+  environment location: c:\Users\alber\anaconda3\envs\forecasting-env
+
+  added / updated specs:
+    - pytorch
+    - pytorch-forecasting
+
+
+The following packages will be downloaded:
+
+    package                    |            build
+    ---------------------------|-----------------
+    alembic-1.15.2             |     pyhd8ed1ab_0         155 KB  conda-forge
+    blas-2.106                 |              mkl          13 KB  conda-forge
+    brotli-python-1.0.9        |  py310h00ffb61_8         336 KB  conda-forge
+    ca-certificates-2025.1.31  |       h4c7d964_1         156 KB  conda-forge
+    certifi-2025.1.31          |     pyhd8ed1ab_0         159 KB  conda-forge
+    charset-normalizer-3.4.1   |     pyhd8ed1ab_0          46 KB  conda-forge
+    colorlog-6.9.0             |     pyh7428d3b_1          16 KB  conda-forge
+    cycler-0.12.1              |     pyhd8ed1ab_1          13 KB  conda-forge
+    filelock-3.18.0            |     pyhd8ed1ab_0          17 KB  conda-forge
+    fonttools-4.55.3           |  py310h827c3e9_0         2.1 MB
+    freetype-2.10.4            |       h546665d_1         489 KB  conda-forge
+    fsspec-2025.3.2            |     pyhd8ed1ab_0         139 KB  conda-forge
+    greenlet-3.1.1             |  py310h5da7b33_0         212 KB
+    idna-3.10                  |     pyhd8ed1ab_1          49 KB  conda-forge
+    jinja2-2.11.3              |     pyhd8ed1ab_2          94 KB  conda-forge
+    joblib-1.4.2               |     pyhd8ed1ab_1         215 KB  conda-forge
+    jpeg-9e                    |       hcfcfb64_3         283 KB  conda-forge
+    kiwisolver-1.4.8           |  py310h5da7b33_0          63 KB
+    lcms2-2.16                 |       hb4a4139_0         566 KB
+    libblas-3.9.0              |            6_mkl         3.9 MB  conda-forge
+    libcblas-3.9.0             |            6_mkl         3.9 MB  conda-forge
+    liblapack-3.9.0            |            6_mkl         3.9 MB  conda-forge
+    liblapacke-3.9.0           |            6_mkl         3.9 MB  conda-forge
+    libuv-1.48.0               |       h827c3e9_0         322 KB
+    libwebp-base-1.3.2         |       h3d04722_1         303 KB
+    lightning-2.5.1            |     pyhd8ed1ab_0         441 KB  conda-forge
+    lightning-utilities-0.14.3 |     pyhd8ed1ab_0          29 KB  conda-forge
+    lz4-c-1.9.4                |       hcfcfb64_0         131 KB  conda-forge
+    mako-1.3.10                |     pyhd8ed1ab_0          66 KB  conda-forge
+    markupsafe-1.1.1           |  py310he2412df_4          32 KB  conda-forge
+    matplotlib-base-3.5.3      |  py310h79a7439_0         7.4 MB  conda-forge
+    mpmath-1.3.0               |     pyhd8ed1ab_1         429 KB  conda-forge
+    networkx-3.2.1             |     pyhd8ed1ab_0         1.1 MB  conda-forge
+    numpy-1.23.5               |  py310h4a8f9c9_0         5.0 MB  conda-forge
+    openjpeg-2.5.2             |       hae555c5_0         268 KB
+    openssl-3.0.16             |       h3f729d1_0         7.8 MB
+    optuna-4.3.0               |     pyhd8ed1ab_0         232 KB  conda-forge
+    optuna-integration-4.3.0   |     pyhd8ed1ab_0          72 KB  conda-forge
+    pandas-1.5.3               |  py310h1c4a608_1        10.2 MB  conda-forge
+    patsy-1.0.1                |     pyhd8ed1ab_1         182 KB  conda-forge
+    pillow-11.1.0              |  py310h096bfcc_0         770 KB
+    pooch-1.8.2                |     pyhd8ed1ab_1          53 KB  conda-forge
+    pyparsing-3.2.3            |     pyhd8ed1ab_1          94 KB  conda-forge
+    pysocks-1.7.1              |     pyh09c184e_7          21 KB  conda-forge
+    pytorch-2.5.1              |     py3.10_cpu_0       147.4 MB  pytorch
+    pytorch-forecasting-1.2.0  |     pyh101cb37_0         125 KB  conda-forge
+    pytorch-lightning-2.5.1    |     pyh506cb10_0         439 KB  conda-forge
+    pytz-2025.2                |     pyhd8ed1ab_0         185 KB  conda-forge
+    pyyaml-6.0                 |  py310h8d17308_5         148 KB  conda-forge
+    requests-2.32.3            |     pyhd8ed1ab_1          57 KB  conda-forge
+    scikit-learn-1.2.2         |  py310hd266714_1         6.3 MB  conda-forge
+    scipy-1.10.1               |  py310h578b7cb_0        22.5 MB  conda-forge
+    sqlalchemy-2.0.37          |  py310h54f65d0_0         5.9 MB
+    statsmodels-0.14.4         |  py310h827c3e9_0        10.4 MB
+    sympy-1.13.3               |     pyh04b8f61_5         4.3 MB  conda-forge
+    threadpoolctl-3.6.0        |     pyhecae5ae_0          23 KB  conda-forge
+    torchmetrics-1.7.1         |     pyhd8ed1ab_0         378 KB  conda-forge
+    tqdm-4.67.1                |     pyhd8ed1ab_1          87 KB  conda-forge
+    typing-extensions-4.12.2   |  py310haa95532_0          10 KB
+    typing_extensions-4.12.2   |  py310haa95532_0          65 KB
+    unicodedata2-15.1.0        |  py310h827c3e9_1         525 KB
+    urllib3-2.2.1              |     pyhd8ed1ab_0          92 KB  conda-forge
+    win_inet_pton-1.1.0        |     pyh7428d3b_8           9 KB  conda-forge
+    yaml-0.2.5                 |       h8ffe710_2          62 KB  conda-forge
+    zstd-1.5.6                 |       h8880b57_0         708 KB
+    ------------------------------------------------------------
+                                           Total:       255.1 MB
+
+The following NEW packages will be INSTALLED:
+
+  alembic            conda-forge/noarch::alembic-1.15.2-pyhd8ed1ab_0 
+  blas               conda-forge/win-64::blas-2.106-mkl 
+  brotli-python      conda-forge/win-64::brotli-python-1.0.9-py310h00ffb61_8 
+  certifi            conda-forge/noarch::certifi-2025.1.31-pyhd8ed1ab_0 
+  charset-normalizer conda-forge/noarch::charset-normalizer-3.4.1-pyhd8ed1ab_0 
+  colorlog           conda-forge/noarch::colorlog-6.9.0-pyh7428d3b_1 
+  cycler             conda-forge/noarch::cycler-0.12.1-pyhd8ed1ab_1 
+  filelock           conda-forge/noarch::filelock-3.18.0-pyhd8ed1ab_0 
+  fonttools          pkgs/main/win-64::fonttools-4.55.3-py310h827c3e9_0 
+  freetype           conda-forge/win-64::freetype-2.10.4-h546665d_1 
+  fsspec             conda-forge/noarch::fsspec-2025.3.2-pyhd8ed1ab_0 
+  greenlet           pkgs/main/win-64::greenlet-3.1.1-py310h5da7b33_0 
+  idna               conda-forge/noarch::idna-3.10-pyhd8ed1ab_1 
+  intel-openmp       pkgs/main/win-64::intel-openmp-2023.1.0-h59b6b97_46320 
+  jinja2             conda-forge/noarch::jinja2-2.11.3-pyhd8ed1ab_2 
+  joblib             conda-forge/noarch::joblib-1.4.2-pyhd8ed1ab_1 
+  jpeg               conda-forge/win-64::jpeg-9e-hcfcfb64_3 
+  kiwisolver         pkgs/main/win-64::kiwisolver-1.4.8-py310h5da7b33_0 
+  lcms2              pkgs/main/win-64::lcms2-2.16-hb4a4139_0 
+  lerc               pkgs/main/win-64::lerc-3.0-hd77b12b_0 
+  libblas            conda-forge/win-64::libblas-3.9.0-6_mkl 
+  libcblas           conda-forge/win-64::libcblas-3.9.0-6_mkl 
+  libdeflate         pkgs/main/win-64::libdeflate-1.17-h2bbff1b_1 
+  liblapack          conda-forge/win-64::liblapack-3.9.0-6_mkl 
+  liblapacke         conda-forge/win-64::liblapacke-3.9.0-6_mkl 
+  libpng             pkgs/main/win-64::libpng-1.6.39-h8cc25b3_0 
+  libtiff            pkgs/main/win-64::libtiff-4.5.1-hd77b12b_0 
+  libuv              pkgs/main/win-64::libuv-1.48.0-h827c3e9_0 
+  libwebp-base       pkgs/main/win-64::libwebp-base-1.3.2-h3d04722_1 
+  lightning          conda-forge/noarch::lightning-2.5.1-pyhd8ed1ab_0 
+  lightning-utiliti~ conda-forge/noarch::lightning-utilities-0.14.3-pyhd8ed1ab_0 
+  lz4-c              conda-forge/win-64::lz4-c-1.9.4-hcfcfb64_0 
+  m2w64-gcc-libgfor~ conda-forge/win-64::m2w64-gcc-libgfortran-5.3.0-6 
+  m2w64-gcc-libs     conda-forge/win-64::m2w64-gcc-libs-5.3.0-7 
+  m2w64-gcc-libs-co~ conda-forge/win-64::m2w64-gcc-libs-core-5.3.0-7 
+  m2w64-gmp          conda-forge/win-64::m2w64-gmp-6.1.0-2 
+  m2w64-libwinpthre~ conda-forge/win-64::m2w64-libwinpthread-git-5.0.0.4634.697f757-2 
+  mako               conda-forge/noarch::mako-1.3.10-pyhd8ed1ab_0 
+  markupsafe         conda-forge/win-64::markupsafe-1.1.1-py310he2412df_4 
+  matplotlib-base    conda-forge/win-64::matplotlib-base-3.5.3-py310h79a7439_0 
+  mkl                pkgs/main/win-64::mkl-2023.1.0-h6b88ed4_46358 
+  mpmath             conda-forge/noarch::mpmath-1.3.0-pyhd8ed1ab_1 
+  msys2-conda-epoch  conda-forge/win-64::msys2-conda-epoch-20160418-1 
+  networkx           conda-forge/noarch::networkx-3.2.1-pyhd8ed1ab_0 
+  numpy              conda-forge/win-64::numpy-1.23.5-py310h4a8f9c9_0 
+  openjpeg           pkgs/main/win-64::openjpeg-2.5.2-hae555c5_0 
+  optuna             conda-forge/noarch::optuna-4.3.0-pyhd8ed1ab_0 
+  optuna-integration conda-forge/noarch::optuna-integration-4.3.0-pyhd8ed1ab_0 
+  pandas             conda-forge/win-64::pandas-1.5.3-py310h1c4a608_1 
+  patsy              conda-forge/noarch::patsy-1.0.1-pyhd8ed1ab_1 
+  pillow             pkgs/main/win-64::pillow-11.1.0-py310h096bfcc_0 
+  pooch              conda-forge/noarch::pooch-1.8.2-pyhd8ed1ab_1 
+  pyparsing          conda-forge/noarch::pyparsing-3.2.3-pyhd8ed1ab_1 
+  pysocks            conda-forge/noarch::pysocks-1.7.1-pyh09c184e_7 
+  pytorch            pytorch/win-64::pytorch-2.5.1-py3.10_cpu_0 
+  pytorch-forecasti~ conda-forge/noarch::pytorch-forecasting-1.2.0-pyh101cb37_0 
+  pytorch-lightning  conda-forge/noarch::pytorch-lightning-2.5.1-pyh506cb10_0 
+  pytorch-mutex      pytorch/noarch::pytorch-mutex-1.0-cpu 
+  pytz               conda-forge/noarch::pytz-2025.2-pyhd8ed1ab_0 
+  pyyaml             conda-forge/win-64::pyyaml-6.0-py310h8d17308_5 
+  requests           conda-forge/noarch::requests-2.32.3-pyhd8ed1ab_1 
+  scikit-learn       conda-forge/win-64::scikit-learn-1.2.2-py310hd266714_1 
+  scipy              conda-forge/win-64::scipy-1.10.1-py310h578b7cb_0 
+  sqlalchemy         pkgs/main/win-64::sqlalchemy-2.0.37-py310h54f65d0_0 
+  statsmodels        pkgs/main/win-64::statsmodels-0.14.4-py310h827c3e9_0 
+  sympy              conda-forge/noarch::sympy-1.13.3-pyh04b8f61_5 
+  tbb                pkgs/main/win-64::tbb-2021.8.0-h59b6b97_0 
+  threadpoolctl      conda-forge/noarch::threadpoolctl-3.6.0-pyhecae5ae_0 
+  torchmetrics       conda-forge/noarch::torchmetrics-1.7.1-pyhd8ed1ab_0 
+  tqdm               conda-forge/noarch::tqdm-4.67.1-pyhd8ed1ab_1 
+  typing-extensions  pkgs/main/win-64::typing-extensions-4.12.2-py310haa95532_0 
+  unicodedata2       pkgs/main/win-64::unicodedata2-15.1.0-py310h827c3e9_1 
+  urllib3            conda-forge/noarch::urllib3-2.2.1-pyhd8ed1ab_0 
+  win_inet_pton      conda-forge/noarch::win_inet_pton-1.1.0-pyh7428d3b_8 
+  yaml               conda-forge/win-64::yaml-0.2.5-h8ffe710_2 
+  zstd               pkgs/main/win-64::zstd-1.5.6-h8880b57_0 
+
+The following packages will be UPDATED:
+
+  ca-certificates    conda-forge/win-64::ca-certificates-2~ --> conda-forge/noarch::ca-certificates-2025.1.31-h4c7d964_1 
+  openssl                                 3.0.15-h827c3e9_0 --> 3.0.16-h3f729d1_0 
+
+The following packages will be SUPERSEDED by a higher-priority channel:
+
+  typing_extensions  conda-forge/noarch::typing_extensions~ --> pkgs/main/win-64::typing_extensions-4.12.2-py310haa95532_0 
+
+
+
+Downloading and Extracting Packages
+typing_extensions-4. | 65 KB     |            |   0% 
+optuna-integration-4 | 72 KB     |            |   0% [A
+
+torchmetrics-1.7.1   | 378 KB    |            |   0% [A[A
+
+
+liblapack-3.9.0      | 3.9 MB    |            |   0% [A[A[A
+
+
+
+lz4-c-1.9.4          | 131 KB    |            |   0% [A[A[A[A
+
+
+
+
+joblib-1.4.2         | 215 KB    |            |   0% [A[A[A[A[A
+
+
+
+
+
+lcms2-2.16           | 566 KB    |            |   0% [A[A[A[A[A[A
+
+
+
+
+
+
+sympy-1.13.3         | 4.3 MB    |            |   0% [A[A[A[A[A[A[A
+
+
+
+
+
+
+
+statsmodels-0.14.4   | 10.4 MB   |            |   0% [A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+fonttools-4.55.3     | 2.1 MB    |            |   0% [A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+brotli-python-1.0.9  | 336 KB    |            |   0% [A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+alembic-1.15.2       | 155 KB    |            |   0% [A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+filelock-3.18.0      | 17 KB     |            |   0% [A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+colorlog-6.9.0       | 16 KB     |            |   0% [A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+libuv-1.48.0         | 322 KB    |            |   0% [A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+pytz-2025.2          | 185 KB    |            |   0% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+pyyaml-6.0           | 148 KB    |            |   0% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+lightning-2.5.1      | 441 KB    |            |   0% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+threadpoolctl-3.6.0  | 23 KB     |            |   0% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ ... (more hidden) ...[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[Atyping_extensions-4. | 65 KB     | ##4        |  24% 
+optuna-integration-4 | 72 KB     | ##2        |  22% [A
+
+
+
+lz4-c-1.9.4          | 131 KB    | #2         |  12% [A[A[A[A
+
+torchmetrics-1.7.1   | 378 KB    | 4          |   4% [A[Atyping_extensions-4. | 65 KB     | ########## | 100% 
+
+
+
+
+
+
+sympy-1.13.3         | 4.3 MB    |            |   0% [A[A[A[A[A[A[A
+
+
+liblapack-3.9.0      | 3.9 MB    |            |   0% [A[A[A
+
+
+
+lz4-c-1.9.4          | 131 KB    | ########## | 100% [A[A[A[A
+
+
+liblapack-3.9.0      | 3.9 MB    | ######7    |  67% [A[A[A
+optuna-integration-4 | 72 KB     | ########## | 100% [A
+optuna-integration-4 | 72 KB     | ########## | 100% [A
+
+
+
+
+
+
+
+
+
+brotli-python-1.0.9  | 336 KB    | 4          |   5% [A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+alembic-1.15.2       | 155 KB    | #          |  10% [A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+joblib-1.4.2         | 215 KB    | 7          |   7% [A[A[A[A[A
+
+
+
+
+
+lcms2-2.16           | 566 KB    | 2          |   3% [A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+filelock-3.18.0      | 17 KB     | #########1 |  92% [A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+colorlog-6.9.0       | 16 KB     | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+libuv-1.48.0         | 322 KB    | 4          |   5% [A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+statsmodels-0.14.4   | 10.4 MB   |            |   0% [A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+pytz-2025.2          | 185 KB    | 8          |   9% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+pyyaml-6.0           | 148 KB    | #          |  11% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+fonttools-4.55.3     | 2.1 MB    |            |   1% [A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+lightning-2.5.1      | 441 KB    | 3          |   4% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+threadpoolctl-3.6.0  | 23 KB     | ######8    |  69% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+statsmodels-0.14.4   | 10.4 MB   | #####4     |  54% [A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ ... (more hidden) ...[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+fonttools-4.55.3     | 2.1 MB    | ######5    |  65% [A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ ... (more hidden) ...[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ ... (more hidden) ...[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ ... (more hidden) ...[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+torchmetrics-1.7.1   | 378 KB    | ########## | 100% [A[A
+
+torchmetrics-1.7.1   | 378 KB    | ########## | 100% [A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ ... (more hidden) ...[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+liblapack-3.9.0      | 3.9 MB    | ########## | 100% [A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ ... (more hidden) ...[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+brotli-python-1.0.9  | 336 KB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+brotli-python-1.0.9  | 336 KB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ ... (more hidden) ...[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ ... (more hidden) ...[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ ... (more hidden) ...[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+alembic-1.15.2       | 155 KB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+alembic-1.15.2       | 155 KB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ ... (more hidden) ...[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+lcms2-2.16           | 566 KB    | ########## | 100% [A[A[A[A[A[A
+
+
+
+
+
+lcms2-2.16           | 566 KB    | ########## | 100% [A[A[A[A[A[A
+
+
+
+
+joblib-1.4.2         | 215 KB    | ########## | 100% [A[A[A[A[A
+
+
+
+
+joblib-1.4.2         | 215 KB    | ########## | 100% [A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+filelock-3.18.0      | 17 KB     | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ ... (more hidden) ...[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+colorlog-6.9.0       | 16 KB     | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ ... (more hidden) ...[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+libuv-1.48.0         | 322 KB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+libuv-1.48.0         | 322 KB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ ... (more hidden) ...[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ ... (more hidden) ...[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+pyyaml-6.0           | 148 KB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+pyyaml-6.0           | 148 KB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ ... (more hidden) ...[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+threadpoolctl-3.6.0  | 23 KB     | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+threadpoolctl-3.6.0  | 23 KB     | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ ... (more hidden) ...[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ ... (more hidden) ...[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ ... (more hidden) ...[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ ... (more hidden) ...[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ ... (more hidden) ...[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ ... (more hidden) ...[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ ... (more hidden) ...[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ ... (more hidden) ...[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+lightning-2.5.1      | 441 KB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+lightning-2.5.1      | 441 KB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ ... (more hidden) ...[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ ... (more hidden) ...[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ ... (more hidden) ...[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+pytz-2025.2          | 185 KB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+pytz-2025.2          | 185 KB    | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ ... (more hidden) ...[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ ... (more hidden) ...[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ ... (more hidden) ...[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ ... (more hidden) ...[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ ... (more hidden) ...[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ ... (more hidden) ...[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ ... (more hidden) ...[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+sympy-1.13.3         | 4.3 MB    | ########## | 100% [A[A[A[A[A[A[A
+
+
+
+
+
+
+sympy-1.13.3         | 4.3 MB    | ########## | 100% [A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+fonttools-4.55.3     | 2.1 MB    | ########## | 100% [A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+fonttools-4.55.3     | 2.1 MB    | ########## | 100% [A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+statsmodels-0.14.4   | 10.4 MB   | ########## | 100% [A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+statsmodels-0.14.4   | 10.4 MB   | ########## | 100% [A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ ... (more hidden) ...[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ ... (more hidden) ...[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                      [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A                                                     
+                                                     [A
+
+                                                     [A[A
+
+
+                                                     [A[A[A
+
+
+
+                                                     [A[A[A[A
+
+
+
+
+                                                     [A[A[A[A[A
+
+
+
+
+
+                                                     [A[A[A[A[A[A
+
+
+
+
+
+
+                                                     [A[A[A[A[A[A[A
+
+
+
+
+
+
+
+                                                     [A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+                                                     [A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+                                                     [A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+                                                     [A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+                                                     [A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+                                                     [A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                     [A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                     [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                     [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                     [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                     [A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+[A
+
+[A[A
+
+
+[A[A[A
+
+
+
+[A[A[A[A
+
+
+
+
+[A[A[A[A[A
+
+
+
+
+
+[A[A[A[A[A[A
+
+
+
+
+
+
+[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+[A
+
+[A[A
+
+
+[A[A[A
+
+
+
+[A[A[A[A
+
+
+
+
+[A[A[A[A[A
+
+
+
+
+
+[A[A[A[A[A[A
+
+
+
+
+
+
+[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A
+[A
+
+[A[A
+
+
+[A[A[A
+
+
+
+[A[A[A[A
+
+
+
+
+[A[A[A[A[A
+
+
+
+
+
+[A[A[A[A[A[A
+
+
+
+
+
+
+[A[A[A[A[A[A[A
+Preparing transaction: ...working... done
+Verifying transaction: ...working... done
+Executing transaction: ...working... done
