@@ -116,25 +116,30 @@ def monthly_avg_data(year):
     merged['OBSERVATION_MONTH'] = merged['FIRST_REPORTING_DATE'].dt.to_period('M').dt.to_timestamp()
 
     # Mask to keep only loans that ever went delinquent
-    #delinquent_loans = merged[merged['TIME_TO_FIRST_DELINQUENCY_DAYS'].notna()]
-    non_null_count = merged[merged['TIME_TO_FIRST_DELINQUENCY_DAYS'].notna()]
-    delinquent_loans = merged.copy()
-    delinquent_loans['TIME_TO_FIRST_DELINQUENCY_DAYS'].fillna(9999, inplace=True)
+    delinquent_loans = merged[merged['TIME_TO_FIRST_DELINQUENCY_DAYS'].notna()]
     
     # Metric 1: Total cohort size per month
-    cohort_sizes = delinquent_loans.groupby('OBSERVATION_MONTH')['LOAN SEQUENCE NUMBER'].count().rename("num_loans")
+    cohort_sizes = merged.groupby('OBSERVATION_MONTH')['LOAN SEQUENCE NUMBER'].count().rename("num_loans")
+    print(len(cohort_sizes))
     
-    delinquency_counts = non_null_count.groupby('OBSERVATION_MONTH')['LOAN SEQUENCE NUMBER'].count().rename("num_delinquent_loans")
-
+    # Metric 2: % of loans that ever became delinquent
+    delinquency_counts = delinquent_loans.groupby('OBSERVATION_MONTH')['LOAN SEQUENCE NUMBER'].count().rename("num_delinquent_loans")
+    print(len(delinquency_counts))
     delinquency_rate = (delinquency_counts / cohort_sizes).rename("pct_delinquent")
-    delinquency_rate =delinquency_rate.fillna(0)
-    
+    print(len(delinquency_rate))
     # Metric 3: Among delinquent loans only — how quickly did they go delinquent?
     ttd_stats = delinquent_loans.groupby('OBSERVATION_MONTH')['TIME_TO_FIRST_DELINQUENCY_DAYS'].agg(
         avg_days_to_delinquency='mean',
         median_days_to_delinquency='median'
     )
+    print(len(ttd_stats))
 
+    # Combine all metrics
+    market_risk_by_month = pd.concat([cohort_sizes, delinquency_counts, delinquency_rate, ttd_stats], axis=1).reset_index()
+    
+    # Fill NaNs where there were no delinquencies
+    market_risk_by_month['num_delinquent_loans'] = market_risk_by_month['num_delinquent_loans'].fillna(0).astype(int)
+    market_risk_by_month['pct_delinquent'] = market_risk_by_month['pct_delinquent'].fillna(0)
 
     monthly_avg = df_combined.groupby('MONTHLY REPORTING PERIOD').mean(numeric_only=True)
     monthly_avg = monthly_avg.dropna(axis=1, how='all')
@@ -142,26 +147,6 @@ def monthly_avg_data(year):
     monthly_avg = monthly_avg.loc[:, ~monthly_avg.columns.str.contains('code', case=False)]
     monthly_avg = monthly_avg.reset_index()
     monthly_avg = monthly_avg.dropna()
-
-    return cohort_sizes, delinquency_counts, delinquency_rate, ttd_stats, monthly_avg
-
-def combine_metrics(cohort_sizes, delinquency_counts, delinquency_rate, ttd_stats, monthly_avg):
-    # Combine all metrics
-    cohort_sizes = cohort_sizes.reset_index()
-    delinquency_counts = delinquency_counts.reset_index()
-    delinquency_rate = delinquency_rate.reset_index()
-    ttd_stats = ttd_stats.reset_index()
-
-    # Merge all metrics on OBSERVATION_MONTH
-    market_risk_by_month = cohort_sizes.merge(delinquency_counts, on='OBSERVATION_MONTH', how='outer') \
-                                       .merge(delinquency_rate, on='OBSERVATION_MONTH', how='outer') \
-                                       .merge(ttd_stats, on='OBSERVATION_MONTH', how='outer')
-    #market_risk_by_month = pd.concat([cohort_sizes, delinquency_counts, delinquency_rate, ttd_stats], axis=1)
-    print(market_risk_by_month.index.name)
-    
-    # Fill NaNs where there were no delinquencies
-    market_risk_by_month['num_delinquent_loans'] = market_risk_by_month['num_delinquent_loans'].fillna(0).astype(int)
-    market_risk_by_month['pct_delinquent'] = market_risk_by_month['pct_delinquent'].fillna(0)
 
     all_df = pd.merge(
         monthly_avg,
@@ -175,34 +160,16 @@ def combine_metrics(cohort_sizes, delinquency_counts, delinquency_rate, ttd_stat
 
 def main():
     #download_data(IDS)
-    combined_cohort_sizes = []
-    combined_delinquency_counts = []
-    combined_delinquency_rate = []
-    combined_ttd_stats = []
     combined_df = []
-    for year in range(1999, 2025):
-        cohort_sizes, delinquency_counts, delinquency_rate, ttd_stats, monthly_avg = monthly_avg_data(year)
-        combined_cohort_sizes.append(cohort_sizes)
-        combined_delinquency_counts.append(delinquency_counts)
-        combined_delinquency_rate.append(delinquency_rate)
-        combined_ttd_stats.append(ttd_stats)
+    for year in range(1999, 2001):
+        monthly_avg = monthly_avg_data(year)
         combined_df.append(monthly_avg)
 
-    df_combined_all = pd.concat(combined_df)
-    df_combined_cohort_sizes = pd.concat(combined_cohort_sizes)
-    df_combined_delinquency_counts = pd.concat(combined_delinquency_counts)
-    df_combined_delinquency_rate = pd.concat(combined_delinquency_rate)
-    df_combined_ttd_stats = pd.concat(combined_ttd_stats)
-
-    
-
-    df_combined_all = combine_metrics(df_combined_cohort_sizes, df_combined_delinquency_counts, \
-                                      df_combined_delinquency_rate, df_combined_ttd_stats, df_combined_all)
-
-    df_combined_all = df_combined_all.groupby('MONTHLY REPORTING PERIOD').mean(numeric_only=True)
-    df_combined_all = df_combined_all.reset_index()
-    print(df_combined_all.columns[0])
-    df_combined_all.to_csv('monthly_avg_data.csv', index=False)
+    df_combined = pd.concat(combined_df, ignore_index=True)
+    df_combined = df_combined.groupby('MONTHLY REPORTING PERIOD').mean(numeric_only=True)
+    df_combined = df_combined.reset_index()
+    print(df_combined.columns[0])
+    df_combined.to_csv('monthly_avg_data.csv', index=False)
 
 if __name__ == '__main__':
     main()
