@@ -6,6 +6,7 @@ This project analyzes mortgage data from 1999 to 2024, focusing on loan originat
 
 - `data_cleaning.py`: Main script for downloading, cleaning, and processing mortgage data
 - `eda.ipynb`: Jupyter notebook containing exploratory data analysis
+- `expected_loss.ipynb`: Jupyter notebook containing Expected Credit Loss model
 - `monthly_avg_data.csv`: Processed monthly average data
 - `data_extracted/`: Directory containing raw data files
 - `data.zip`: Compressed data file (not tracked in git)
@@ -41,6 +42,9 @@ The analysis includes various mortgage-related metrics such as:
 - Delinquency status
 - Property types
 - Borrower information
+- Expected Credit Loss
+- Probability of Default
+- Loss Given Default
 
 ## Requirements
 
