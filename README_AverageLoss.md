@@ -25,7 +25,7 @@ To identify geographic patterns in loan losses and highlight high-risk regions b
 A bar chart shows the average actual loss per loan by state, with state abbreviations and a two-column legend for clarity.
 
 ### 💡 Key Insights
-- States like **Hawaii** and **Puerto Rico** show highest average losses (>$90,000)
+- States like **Hawaii** and **Puerto Rico** show highest average losses
 - Some states (e.g., **Wyoming**, **North Dakota**) exhibit minimal or even positive average values
 - Losses vary sharply by geography, supporting the need for location-aware credit risk models
 
